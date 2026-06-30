@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- ============================================================
+       SEO META — editable
+       ============================================================ -->
+  <title>Book Mobile Headlight Restoration | Free Photo Quote | Bay Area</title>
+  <meta name="description" content="Book your mobile headlight restoration in the Bay Area. Upload photos of your headlights, get an accurate quote within 24 hours. We come to you in San Jose, Oakland, San Francisco.">
+  <meta name="keywords" content="book headlight restoration, mobile headlight quote Bay Area, headlight repair appointment San Jose, foggy headlight quote Oakland">
+  <meta name="robots" content="index, follow">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Book Your Restoration — Pristine Headlight Heroes">
+  <meta property="og:description" content="Upload headlight photos and get your free quote within 24 hours.">
+  <meta property="og:image" content="assets/ChatGPT_Image_Jun_23,_2026_at_02_56_03_PM.png">
+
+  <link rel="icon" type="image/png" href="assets/logo.png">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ============================================================
+       HEADER / NAV
+       ============================================================ -->
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="index.html" class="logo-link">
+        <img src="assets/logo.png" alt="Pristine Headlight Heroes logo">
+      </a>
+      <nav class="nav-desktop">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="services.html" class="nav-link">Services</a>
+        <a href="gallery.html" class="nav-link">Gallery</a>
+        <a href="booking.html" class="btn btn-primary btn-sm">Book Now</a>
+      </nav>
+      <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <nav class="nav-mobile">
+      <a href="index.html" class="nav-link">Home</a>
+      <a href="services.html" class="nav-link">Services</a>
+      <a href="gallery.html" class="nav-link">Gallery</a>
+      <a href="booking.html" class="btn btn-primary">Book Now</a>
+    </nav>
+  </header>
+
+  <!-- ============================================================
+       PAGE HERO
+       ============================================================ -->
+  <section class="page-hero">
+    <div class="container" style="position:relative;z-index:2;">
+      <span class="section-label" style="color:var(--red);">Free Quote</span>
+      <h1>Book Your<br>Headlight Restoration</h1>
+      <p>Two quick steps. Upload photos of your headlights and we'll send an accurate quote within 24 hours — no email back-and-forth.</p>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       BOOKING SECTION — editable: form fields
+       ============================================================ -->
+  <section class="booking-section section-pad">
+    <div class="container">
+      <div class="booking-layout">
+
+        <!-- Form column -->
+        <div>
+          <!-- Step progress -->
+          <div class="step-progress">
+            <div class="step-item active">
+              <div class="step-circle">1</div>
+              <div class="step-label">Contact</div>
+            </div>
+            <div class="step-item">
+              <div class="step-circle">2</div>
+              <div class="step-label">Vehicle & Photos</div>
+            </div>
+            <div class="step-item">
+              <div class="step-circle">3</div>
+              <div class="step-label">Service & Date</div>
+            </div>
+          </div>
+
+          <!-- ============================================================
+               FORM — multi-step
+               BACKEND NOTE: see js/main.js submit handler for wiring
+               ============================================================ -->
+          <form id="booking-form" class="form-card" novalidate>
+
+            <!-- STEP 1: Contact info -->
+            <div class="form-step active">
+              <h3>Your Contact Info</h3>
+              <p class="step-desc">So we can send your quote and confirm your appointment.</p>
+
+              <div class="form-group">
+                <label for="name">Full Name<span class="req">*</span></label>
+                <input type="text" id="name" name="name" class="form-control" placeholder="Jane Doe" required>
+                <span class="field-error">Please enter your name.</span>
+              </div>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="phone">Phone<span class="req">*</span></label>
+                  <input type="tel" id="phone" name="phone" class="form-control" placeholder="(408) 555-0123" required>
+                  <span class="field-error">Please enter a valid phone number.</span>
+                </div>
+                <div class="form-group">
+                  <label for="email">Email<span class="req">*</span></label>
+                  <input type="email" id="email" name="email" class="form-control" placeholder="jane@email.com" required>
+                  <span class="field-error">Please enter a valid email address.</span>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="address">Service Address / City<span class="req">*</span></label>
+                <input type="text" id="address" name="address" class="form-control" placeholder="123 Main St, San Jose, CA" required>
+                <span class="field-error">Please enter your service address.</span>
+              </div>
+
+              <div class="form-nav">
+                <div class="form-nav-left"></div>
+                <div class="form-nav-right">
+                  <button type="button" class="btn btn-primary" data-next>Continue</button>
+                </div>
+              </div>
+            </div>
+
+            <!-- STEP 2: Vehicle + photos -->
+            <div class="form-step">
+              <h3>Vehicle & Headlight Photos</h3>
+              <p class="step-desc">Tell us what you drive and upload a few phone photos of your headlights.</p>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="vehicle-make">Vehicle Make<span class="req">*</span></label>
+                  <input type="text" id="vehicle-make" name="vehicle_make" class="form-control" placeholder="Honda" required>
+                  <span class="field-error">Please enter the make.</span>
+                </div>
+                <div class="form-group">
+                  <label for="vehicle-model">Model<span class="req">*</span></label>
+                  <input type="text" id="vehicle-model" name="vehicle_model" class="form-control" placeholder="Civic" required>
+                  <span class="field-error">Please enter the model.</span>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="vehicle-year">Year<span class="req">*</span></label>
+                <input type="number" id="vehicle-year" name="vehicle_year" class="form-control" placeholder="2018" min="1980" max="2026" required>
+                <span class="field-error">Please enter the year.</span>
+              </div>
+
+              <!-- Photo upload -->
+              <div class="form-group">
+                <label>Headlight Photos<span class="req">*</span></label>
+                <div class="upload-zone" id="upload-zone">
+                  <input type="file" id="headlight-photos" name="headlight_photos" accept="image/jpeg,image/png,image/heic,image/heif" multiple>
+                  <div class="upload-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
+                  </div>
+                  <p><strong>Drag & drop</strong> or click to upload</p>
+                  <p class="upload-hint">JPG, PNG, or HEIC — up to 10MB each. Multiple files OK.</p>
+                </div>
+                <div class="preview-grid" id="preview-grid"></div>
+              </div>
+
+              <div class="form-nav">
+                <div class="form-nav-left">
+                  <button type="button" class="btn btn-outline-red" data-prev>Back</button>
+                </div>
+                <div class="form-nav-right">
+                  <button type="button" class="btn btn-primary" data-next>Continue</button>
+                </div>
+              </div>
+            </div>
+
+            <!-- STEP 3: Service + date -->
+            <div class="form-step">
+              <h3>Service & Scheduling</h3>
+              <p class="step-desc">Pick your service and a preferred appointment time.</p>
+
+              <div class="form-group">
+                <label>Service Selection<span class="req">*</span></label>
+                <div class="service-options">
+                  <div class="service-option">
+                    <input type="radio" id="service-restoration" name="service_type" value="Restoration Only" required>
+                    <label for="service-restoration" class="service-option-label">
+                      <strong>Restoration Only</strong>
+                      <span>Single or pair, basic UV sealant</span>
+                    </label>
+                  </div>
+                  <div class="service-option">
+                    <input type="radio" id="service-uv" name="service_type" value="Restoration + UV Coating" required>
+                    <label for="service-uv" class="service-option-label">
+                      <strong>Restoration + UV Coating</strong>
+                      <span>Premium ceramic UV protection</span>
+                    </label>
+                  </div>
+                </div>
+                <span class="field-error">Please select a service.</span>
+              </div>
+
+              <div class="form-group">
+                <label>Single or Pair<span class="req">*</span></label>
+                <div class="service-options">
+                  <div class="service-option">
+                    <input type="radio" id="qty-single" name="quantity" value="Single Headlight" required>
+                    <label for="qty-single" class="service-option-label">
+                      <strong>Single Headlight</strong>
+                      <span>One lens restored</span>
+                    </label>
+                  </div>
+                  <div class="service-option">
+                    <input type="radio" id="qty-pair" name="quantity" value="Headlight Pair" required>
+                    <label for="qty-pair" class="service-option-label">
+                      <strong>Headlight Pair</strong>
+                      <span>Both lenses restored — most popular</span>
+                    </label>
+                  </div>
+                </div>
+                <span class="field-error">Please choose single or pair.</span>
+              </div>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="preferred-date">Preferred Date<span class="req">*</span></label>
+                  <input type="date" id="preferred-date" name="preferred_date" class="form-control" required>
+                  <span class="field-error">Please pick a date.</span>
+                </div>
+                <div class="form-group">
+                  <label for="preferred-time">Preferred Time<span class="req">*</span></label>
+                  <select id="preferred-time" name="preferred_time" class="form-control" required>
+                    <option value="">Select a window</option>
+                    <option value="8:00 AM - 10:00 AM">8:00 AM - 10:00 AM</option>
+                    <option value="10:00 AM - 12:00 PM">10:00 AM - 12:00 PM</option>
+                    <option value="12:00 PM - 2:00 PM">12:00 PM - 2:00 PM</option>
+                    <option value="2:00 PM - 4:00 PM">2:00 PM - 4:00 PM</option>
+                    <option value="4:00 PM - 6:00 PM">4:00 PM - 6:00 PM</option>
+                  </select>
+                  <span class="field-error">Please pick a time.</span>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="notes">Additional Notes</label>
+                <textarea id="notes" name="notes" class="form-control" placeholder="Anything we should know? Parking access, gate codes, specific concerns..."></textarea>
+              </div>
+
+              <div class="form-nav">
+                <div class="form-nav-left">
+                  <button type="button" class="btn btn-outline-red" data-prev>Back</button>
+                </div>
+                <div class="form-nav-right">
+                  <button type="submit" class="btn btn-primary btn-lg">Submit For Quote</button>
+                </div>
+              </div>
+            </div>
+
+          </form>
+
+          <!-- Success message -->
+          <div class="form-card form-success">
+            <div class="success-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            </div>
+            <h3>Request Received</h3>
+            <p>Thanks for choosing Pristine Headlight Heroes. We'll review your photos and send an accurate quote within 24 hours. Keep an eye on your email and phone.</p>
+          </div>
+        </div>
+
+        <!-- Sidebar -->
+        <aside class="booking-sidebar">
+          <div class="sidebar-card">
+            <h4>What Happens Next</h4>
+            <ul>
+              <li>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                We review your photos within 24 hours
+              </li>
+              <li>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                You receive an accurate, no-obligation quote
+              </li>
+              <li>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                We confirm your appointment time
+              </li>
+              <li>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                Our technician arrives at your location
+              </li>
+            </ul>
+          </div>
+
+          <div class="sidebar-card sidebar-quote">
+            <h4>Photo Tips</h4>
+            <p>For the most accurate quote, take photos in daylight, close-up, of each headlight from the front. Include the whole lens in frame.</p>
+          </div>
+
+          <div class="sidebar-card">
+            <h4>Prefer To Call?</h4>
+            <ul>
+              <li>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                (408) 555-0123
+              </li>
+              <li>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                hello@pristineheadlightheroes.com
+              </li>
+            </ul>
+          </div>
+        </aside>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       FOOTER
+       ============================================================ -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="logo-link">
+            <img src="assets/logo.png" alt="Pristine Headlight Heroes logo">
+          </a>
+          <div class="footer-slogan">Heroes For Your Headlights</div>
+          <p>Mobile UV-protected headlight restoration serving the San Francisco Bay Area. We bring showroom clarity to your driveway.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <div class="footer-links">
+            <a href="index.html">Home</a>
+            <a href="services.html">Services</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="booking.html">Book Now</a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Service Area</h4>
+          <div class="footer-cities">
+            <a href="#" class="footer-city">San Jose</a>
+            <a href="#" class="footer-city">Oakland</a>
+            <a href="#" class="footer-city">San Francisco</a>
+            <a href="#" class="footer-city">Fremont</a>
+            <a href="#" class="footer-city">Santa Clara</a>
+            <a href="#" class="footer-city">Sunnyvale</a>
+            <a href="#" class="footer-city">Hayward</a>
+            <a href="#" class="footer-city">Berkeley</a>
+          </div>
+        </div>
+        <div class="footer-col footer-contact">
+          <h4>Contact</h4>
+          <p>
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            (408) 555-0123
+          </p>
+          <p>
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            hello@pristineheadlightheroes.com
+          </p>
+          <p>
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            Serving the entire Bay Area
+          </p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Pristine Headlight Heroes. All rights reserved.</p>
+        <div class="social-links">
+          <a href="#" class="social-link" aria-label="Instagram">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+          </a>
+          <a href="#" class="social-link" aria-label="Facebook">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+          </a>
+          <a href="#" class="social-link" aria-label="Yelp">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2z"/><path d="M12 7v5l3 3"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
